@@ -1,5 +1,16 @@
 " Pathogen
 filetype off " Pathogen needs to run before plugin indent on
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags() " generate helptags for everything in 'runtimepath'
 filetype plugin indent on
+" Added following for autopairs
+set laststatus=2
+set statusline=%F%m%r%h%w\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2b]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
+set expandtab
+set shiftwidth=2
+set smarttab
+set autoindent
+set smartindent
+inoremap { {<CR><BS>}<Esc>ko
+inoremap ( ()<Esc>i
+
