@@ -1,5 +1,17 @@
 " Pathogen
 filetype off " Pathogen needs to run before plugin indent on
-call pathogen#runtime_append_all_bundles()
+" call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags() " generate helptags for everything in 'runtimepath'
 filetype plugin indent on
+set nu
+set laststatus=2
+" set statusline=%F%m%r%h%w\ [TYPE=%Y]\ [POS=%04L,%04v][%p%%]\ [LEN=%L]
+set statusline=%F%m%r%h%w\ %{fugitive#statusline()}\ [POS=%04L,%04v][%p%%]\ [LEN=%L]
+set expandtab
+set shiftwidth=2
+set smarttab
+set smartindent
+inoremap { {<CR><BS>}<Esc>ko
+inoremap ( ()<Esc>i
+nmap <F2> :NERDTreeToggle<CR>
