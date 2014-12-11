@@ -15,3 +15,4 @@ set smartindent
 inoremap { {<CR><BS>}<Esc>ko
 inoremap ( ()<Esc>i
 nmap <F2> :NERDTreeToggle<CR>
+
