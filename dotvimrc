@@ -5,7 +5,6 @@ filetype off
 execute pathogen#infect()
 " generate helptags for everything in runtimepath
 execute pathogen#helptags()
-filetype plugin indent on
 set nu
 set t_Co=256
 set laststatus=2
@@ -18,15 +17,16 @@ au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=white gui=bold,rev
 
 "Tab stuff
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 set smarttab
-set smartindent
-set softtabstop=3
+set softtabstop=4
+"set smartindent
+
 " colorscheme leo
 
 " Indent stuff
 set autoindent
-set smartindent
+"set smartindent
 
 "Display current cursor position in lower right corner.
 set ruler
@@ -47,13 +47,14 @@ set nocompatible
 filetype on
 filetype plugin on
 filetype indent on
+filetype plugin indent on
 syntax on
 
 "Write the old file out when switching between files.
 set autowrite
 
 "Want a different map leader than \
-"set mapleader = ",";
+"set mapleader = \",";
 
 "Ever notice a slight lag after typing the leader key + command? This lowers
 "the timeout.
@@ -68,7 +69,7 @@ set hidden
 colorscheme twilight
 "
 "Set font type and size. Depends on the resolution. Larger screens, prefer h20
-set guifont=Menlo:h14
+"set guifont=Menlo:h14
 
 "Better line wrapping 
 set wrap
